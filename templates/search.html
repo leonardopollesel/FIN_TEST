@@ -1,0 +1,86 @@
+<html>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+      body,h1,h2,h3,h4,h5,h6 {font-family: "Times", sans-serif}
+      .bgimg-1{
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      }
+      .bgimg-1 {
+      background-image: url('/static/background1.jpg');
+      min-height: 100%;
+      }
+   </style>
+   <body class="w3-light-grey w3-content" style="max-width:1600px">
+      <header class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+         <div class="w3-display-middle" style="white-space:nowrap;">
+            <a href = "/home"> <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity w3-round-large"> BOOK SERVICE</span> </a>
+         </div>
+      </header>
+      <center>
+         <br> <br>
+         <h3> Choose a Search Service You Would Like to Use </h3>
+         <br>
+         <div class="w3-container w3-black">
+            <p> </p>
+            <br>
+         </div>
+      </center>
+      <div class="w3-row-padding">
+         <div class="w3-third w3-container w3-margin-bottom w3-center">
+            <a href="{{url_for('search_author')}}">
+            <img src="/static/author.jpg" alt="Author" width="455"  height="350" class="w3-hover">     </a>
+            <div class="w3-container">
+               <p><b>Book Search based on Author</b></p>
+               <p>Give us the Author name and we return the list of books.</p>
+            </div>
+         </div>
+         <div class="w3-third w3-container w3-margin-bottom w3-center">
+            <a href="{{url_for('search_title')}}">
+            <img src="/static/title.jpg" alt="Title" width="455"  height="350" class="w3-hover"> </a>
+            <div class="w3-container">
+               <p><b>Book Search based on Title</b></p>
+               <p>Give us the Title and we return the book details.</p>
+            </div>
+         </div>
+         <div class="w3-third w3-container w3-margin-bottom w3-center">
+            <a href="{{url_for('search_isbn')}}">
+            <img src="/static/isbn.png" alt="ISBN"  width="455"  height="350" class="w3-hover"> </a>
+            <div class="w3-container">
+               <p><b>Book Search based on ISBN</b></p>
+               <p>Give us the ISBN and we return the book details.</p>
+            </div>
+         </div>
+      </div>
+      <div class="w3-row-padding">
+         <div class="w3-half w3-margin-bottom w3-center">
+            <a href="{{url_for('search_year')}}">
+            <img src="/static/year.jpg" alt="Year" width="455"  height="350" class="w3-hover"> </a>
+            <div class="w3-container">
+               <p><b>Book Search based on Year</b></p>
+               <p>Give us the Year and we return the list of books published that year. </p>
+            </div>
+         </div>
+         <div class="w3-half w3-margin-bottom w3-center">
+            <a href="{{url_for('search_publisher')}}">
+            <img src="/static/publisher.jpg" alt="Publisher" width="455"  height="350" class="w3-hover"> </a>
+            <div class="w3-container">
+               <p><b>Book Search based on Publisher</b></p>
+               <p>Give us the Publisher and we return the books published. </p>
+            </div>
+         </div>
+      </div>
+       
+       <div class="w3-container w3-black">
+            <p> </p>
+            <br> 
+         </div>
+          <br>
+   </body>
+</html>
