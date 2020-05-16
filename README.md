@@ -44,7 +44,7 @@ Look at the application using the link - http://'your IP address':8080/home
 
 ## Services Description 
 
-Book Search: Search Service for books based on Author, Title, ISBN, Year and Publisher.
+Book Search: Search Service for books based on Author, Title, ISBN, Year and Publisher.\n
 Translate Blurb: Translate the blurb in a language you are more familiar with.
 Books Similarity: Find similarity score based on blurbs between two titles.
 Search Book on Google: Enter the book title, we give you the top links on Google. 
