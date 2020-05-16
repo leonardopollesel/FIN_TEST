@@ -784,7 +784,7 @@ def more_info():
         return render_template("more_info.html")
 
 
-@app.route("/more_info__result", methods=["GET", "POST"])
+@app.route("/more_info_result", methods=["GET", "POST"])
 def more_info_result():
     user_title1 = request.form["text"]
 
