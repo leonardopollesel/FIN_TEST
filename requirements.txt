@@ -4,7 +4,6 @@ pandas
 fuzzywuzzy
 nltk
 googletrans
-os
 flask
 gdown
 google
