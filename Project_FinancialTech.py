@@ -24,8 +24,6 @@ import gdown
 import csv
 from googlesearch import search
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer as senti
-from textblob import TextBlob
-
 import wikipedia
 import wikipediaapi
 import matplotlib
@@ -256,8 +254,8 @@ def wordcloud_fun(title):
         plt.savefig(os.path.join(folder_cloud, "wordcloud.png"))
 
 
-def more_info(title):
-    pd_isbn = pd.DataFrame(get_isbn("Airframe"), columns=["ISBN"])
+def more_info_fun(title):
+    pd_isbn = pd.DataFrame(get_isbn(title), columns=["ISBN"])
     if pd_isbn["ISBN"].iloc[0] == "ERROR":
         output_info = pd.DataFrame(
             {
@@ -324,7 +322,7 @@ def more_info(title):
         else:
             x = 0
             for i in range(len(pd_isbn)):
-                isbn = pd_isbn["ISBN"].iloc[0]
+                isbn = pd_isbn["ISBN"].iloc[i]
                 base_link = "https://www.googleapis.com/books/v1/volumes?q=isbn:"
                 final_link = base_link + isbn
                 page = requests.get(final_link)
@@ -789,7 +787,7 @@ def more_info_result():
     user_title1 = request.form["text"]
 
     def get_more_info(title):
-        infos = more_info(title)
+        infos = more_info_fun(title)
         return infos
 
     final_info = get_more_info(user_title1)
