@@ -41,6 +41,8 @@ app = Flask(__name__)
 # list words for lemmatization
 nltk.download("wordnet")
 nltk.download("averaged_perceptron_tagger")
+nltk.download('punkt')
+
 matplotlib.use("Agg")
 
 cwd = os.getcwd()
