@@ -254,6 +254,12 @@ def wordcloud_fun(title):
         plt.savefig(os.path.join(folder_cloud, "wordcloud.png"))
 
 
+def find_aut(input_au):
+    output00 = database[database["Author"] == input_au][
+        ["Title", "Publisher", "Year", "ISBN"]
+    ]
+    return output00
+
 def more_info_fun(title):
     pd_isbn = pd.DataFrame(get_isbn(title), columns=["ISBN"])
     if pd_isbn["ISBN"].iloc[0] == "ERROR":
@@ -760,14 +766,14 @@ def random_book():
 # Random Author
 @app.route("/random_author", methods=["GET", "POST"])
 def random_author():
+    
     def random_author1():
         choice_athr = randint(0, database.shape[0])
         my_author = database["Author"].iloc[choice_athr]
-        result = database(my_author)
+        result = find_aut(my_author)
         slist = [my_author] * len(result)
         result.insert(0, "Author", slist, True)
         return result
-
     author_info = random_author1()
 
     return render_template("search_solution.html", tables=author_info.to_html())
