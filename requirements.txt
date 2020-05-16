@@ -8,7 +8,7 @@ flask
 gdown
 google
 wikipedia
-Wikipedia-ape
+Wikipedia-api
 matplotlib
 wordcloud
 bs4
