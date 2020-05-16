@@ -24,6 +24,7 @@ import gdown
 import csv
 from googlesearch import search
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer as senti
+from textblob import TextBlob, Word
 import wikipedia
 import wikipediaapi
 import matplotlib
