@@ -1,7 +1,6 @@
 vaderSentiment
 numpy
 pandas
-collections
 math
 re
 fuzzywuzzy
