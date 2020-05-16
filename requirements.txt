@@ -1,7 +1,6 @@
 vaderSentiment
 numpy
 pandas
-re
 fuzzywuzzy
 nltk
 googletrans
